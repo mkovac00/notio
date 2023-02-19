@@ -1,7 +1,10 @@
 import React from "react";
+import "./App.scss";
+
+import NotesList from "./components/NotesList";
 
 const App = () => {
-  return <div>Hello vite!</div>;
+  return <NotesList />;
 };
 
 export default App;

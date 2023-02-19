@@ -1,0 +1,13 @@
+.notes-list-title {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.notes-list-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: wrap;
+  gap: 32px;
+}
