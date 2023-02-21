@@ -7,7 +7,7 @@ import { notes } from "../assets/data";
 
 const NotesList = () => {
   return (
-    <>
+    <div className="notes-list-container">
       <h1 className="notes-list-title">Notes</h1>
       <ul className="notes-list-content">
         {notes.map((note) => (
@@ -19,7 +19,7 @@ const NotesList = () => {
           />
         ))}
       </ul>
-    </>
+    </div>
   );
 };
 

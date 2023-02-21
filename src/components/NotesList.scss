@@ -1,13 +1,29 @@
-.notes-list-title {
-  font-size: 48px;
-  font-weight: bold;
+@import "../assets/variables.scss";
+
+.notes-list-container {
+  .notes-list-title {
+    font-size: 48px;
+    font-weight: bold;
+    padding-left: 8vw;
+  }
+
+  .notes-list-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-flow: wrap;
+  }
 }
 
-.notes-list-content {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  flex-flow: wrap;
-  gap: 32px;
+@media only screen and (min-width: $small-screen) {
+  .notes-list-container {
+    .notes-list-title {
+      padding-left: 16px;
+    }
+
+    .notes-list-content {
+      justify-content: flex-start;
+    }
+  }
 }

@@ -15,7 +15,9 @@ const Note = (props: NoteProps) => {
       style={{ backgroundColor: props.backgroundColor }}
     >
       <h1 className="note-title">{props.title}</h1>
-      <p className="note-content">{props.content}</p>
+      <div className="note-content-wrapper">
+        <p className="note-content">{props.content}</p>
+      </div>
       <p className="note-date">{props.updated}</p>
     </div>
   );

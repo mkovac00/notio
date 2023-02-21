@@ -1,32 +1,67 @@
 @import "../assets/variables.scss";
+@import "../assets/mixins.scss";
 
 .note-container {
-  width: 250px;
-  height: 250px;
+  width: 40vw;
+  height: 40vw;
   border-radius: 16px;
-  padding: 16px;
+  padding: 12px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-start;
-  background-color: $color-option-1;
+  margin: 12px;
 
   .note-title {
-    font-size: 16px;
+    font-size: 13px;
     height: 15%;
     width: 100%;
+    @include text-overflow-single-line(32vw);
   }
 
-  .note-content {
-    font-size: 13px;
-    height: 75%;
+  .note-content-wrapper {
+    height: 65%;
     width: 100%;
+    overflow: hidden;
+
+    .note-content {
+      font-size: 12px;
+    }
   }
 
   .note-date {
-    font-size: 13px;
+    font-size: 12px;
     height: 10%;
     width: 100%;
     opacity: 0.5;
+  }
+}
+
+@media only screen and (max-width: $extra-small) {
+  .note-container {
+    .note-date {
+      font-size: 11px;
+    }
+  }
+}
+
+@media only screen and (min-width: $small-screen) {
+  .note-container {
+    width: 250px;
+    height: 250px;
+    padding: 16px;
+
+    .note-title {
+      font-size: 16px;
+      @include text-overflow-single-line(220px);
+    }
+
+    .note-content-wrapper {
+      @include text-overflow-multi-line(220px, 8);
+
+      .note-content {
+        font-size: 13px;
+      }
+    }
   }
 }

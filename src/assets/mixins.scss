@@ -1,0 +1,14 @@
+@mixin text-overflow-single-line($textWidth) {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: $textWidth;
+}
+
+@mixin text-overflow-multi-line($textWidth, $maxNumOfLines) {
+  overflow: hidden;
+  width: $textWidth;
+  display: -webkit-box;
+  -webkit-line-clamp: $maxNumOfLines;
+  -webkit-box-orient: vertical;
+}

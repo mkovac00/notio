@@ -7,9 +7,16 @@ export const notes = [
   },
   {
     title: "GROCERY LIST",
-    content: "Eggs, Milk, Bread, Coffee, iPhone...",
+    content: "Eggs, Milk, Bread, Coffee, iPhone",
     updated: "February 17, 2023",
     backgroundColor: "#9CEEE9",
+  },
+  {
+    title: "GIFT IDEAS GIFT IDEAS GIFT",
+    content:
+      "A plushie, an iPhone, a keychain, a set of chairs, a new laptop, a bracelet, money Ill just keep writing untilk I Cnanot write anymore cause i need so many lines in this writing help llease i need lines how long do i have to do hits iam onot ure jasd asdka dsakfa sfak fkkks afa  afaskfja fjdskfj sdkks dfjkds jfsdk fskj .",
+    updated: "September 29, 2022",
+    backgroundColor: "#6CEDBE",
   },
   {
     title: "BIRTHDAYS",
@@ -32,7 +39,8 @@ export const notes = [
   },
   {
     title: "GIFT IDEAS",
-    content: "A plushie, an iPhone, a keychain, a set of chairs, a new laptop",
+    content:
+      "A plushie, an iPhone, a keychain, a set of chairs, a new laptop, a bracelet, money.",
     updated: "December 11, 2022",
     backgroundColor: "#6CEDBE",
   },
