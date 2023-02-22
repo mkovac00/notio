@@ -47,6 +47,21 @@
 
 @media only screen and (min-width: $small-screen) {
   .note-container {
+    width: 200px;
+    height: 200px;
+
+    .note-title {
+      @include text-overflow-single-line(180px);
+    }
+
+    .note-content-wrapper {
+      @include text-overflow-multi-line(180px, 7);
+    }
+  }
+}
+
+@media only screen and (min-width: $medium-screen) {
+  .note-container {
     width: 250px;
     height: 250px;
     padding: 16px;

@@ -1,10 +1,11 @@
 @import "../assets/variables.scss";
+@import "../assets/mixins";
 
 .notes-list-container {
   .notes-list-title {
     font-size: 48px;
     font-weight: bold;
-    padding-left: 8vw;
+    @include padding(30px, 0, 0, 10vw);
   }
 
   .notes-list-content {
@@ -16,7 +17,7 @@
   }
 }
 
-@media only screen and (min-width: $small-screen) {
+@media only screen and (min-width: $medium-screen) {
   .notes-list-container {
     .notes-list-title {
       padding-left: 16px;

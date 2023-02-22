@@ -44,4 +44,58 @@ export const notes = [
     updated: "December 11, 2022",
     backgroundColor: "#6CEDBE",
   },
+  {
+    title: "VACATION PLACE IDEAS",
+    content: "Venice, Madrid, Split, Stockholm, Barcelona",
+    updated: "December 11, 2022",
+    backgroundColor: "#FF9C96",
+  },
+  {
+    title: "VACATION PLACE IDEAS",
+    content: "Venice, Madrid, Split, Stockholm, Barcelona",
+    updated: "December 11, 2022",
+    backgroundColor: "#FF9C96",
+  },
+  {
+    title: "VACATION PLACE IDEAS",
+    content: "Venice, Madrid, Split, Stockholm, Barcelona",
+    updated: "December 11, 2022",
+    backgroundColor: "#FF9C96",
+  },
+  {
+    title: "VACATION PLACE IDEAS",
+    content: "Venice, Madrid, Split, Stockholm, Barcelona",
+    updated: "December 11, 2022",
+    backgroundColor: "#FF9C96",
+  },
+  {
+    title: "VACATION PLACE IDEAS",
+    content: "Venice, Madrid, Split, Stockholm, Barcelona",
+    updated: "December 11, 2022",
+    backgroundColor: "#FF9C96",
+  },
+  {
+    title: "VACATION PLACE IDEAS",
+    content: "Venice, Madrid, Split, Stockholm, Barcelona",
+    updated: "December 11, 2022",
+    backgroundColor: "#FF9C96",
+  },
+  {
+    title: "VACATION PLACE IDEAS",
+    content: "Venice, Madrid, Split, Stockholm, Barcelona",
+    updated: "December 11, 2022",
+    backgroundColor: "#FF9C96",
+  },
+  {
+    title: "VACATION PLACE IDEAS",
+    content: "Venice, Madrid, Split, Stockholm, Barcelona",
+    updated: "December 11, 2022",
+    backgroundColor: "#FF9C96",
+  },
+  {
+    title: "VACATION PLACE IDEAS",
+    content: "Venice, Madrid, Split, Stockholm, Barcelona",
+    updated: "December 11, 2022",
+    backgroundColor: "#FF9C96",
+  },
 ];

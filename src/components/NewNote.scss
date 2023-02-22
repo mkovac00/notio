@@ -1,0 +1,41 @@
+@import "../assets/variables";
+
+.new-note-picker {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 10vw;
+  padding-top: 40px;
+
+  .new-note-btn {
+    font-size: 32px;
+  }
+
+  .colored-circle {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: red;
+    margin-left: 24px;
+  }
+}
+
+@media only screen and (min-width: $medium-screen) {
+  .new-note-picker {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+    padding-top: 0;
+
+    .new-note-btn {
+      font-size: 32px;
+    }
+
+    .colored-circle {
+      margin-top: 24px;
+      margin-left: 0;
+    }
+  }
+}

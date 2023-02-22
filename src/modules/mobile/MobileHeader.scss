@@ -1,0 +1,21 @@
+@import "../../assets/variables";
+@import "../../assets/mixins";
+
+.mobile-header {
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+  background-color: $primary-light-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include padding(16px, 28px, 16px, 28px);
+
+  .mobile-header-logo {
+    font-size: 28px;
+  }
+
+  .mobile-dark-mode-btn {
+    font-size: 28px;
+  }
+}
