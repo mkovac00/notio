@@ -7,12 +7,18 @@
   padding: 0;
 }
 
+html {
+  background-color: $light-gray-color;
+}
+
 .app {
   display: grid;
   grid-template-rows: 100px 1fr;
   grid-template-areas:
     "Header"
     "Main";
+
+  background-color: $primary-light-color;
 
   .header-section {
     grid-area: Header;
@@ -29,6 +35,10 @@
     grid-template-columns: 100px 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: "Header Main";
+
+    margin: 80px;
+    border-radius: 16px;
+    box-shadow: $box-shadow;
 
     .header-section {
       grid-area: Header;
