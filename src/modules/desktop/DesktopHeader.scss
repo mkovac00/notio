@@ -1,3 +1,5 @@
+@import "../../assets/variables";
+
 .desktop-header {
   position: fixed;
   top: 0;
@@ -8,6 +10,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  border-right: 2px solid $light-gray-color;
 
   .desktop-header-logo {
     font-size: 24px;
