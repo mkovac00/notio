@@ -7,6 +7,7 @@ import NotesList from "./components/NotesList";
 import MobileHeader from "./modules/mobile/MobileHeader";
 import DesktopHeader from "./modules/desktop/DesktopHeader";
 import NewNote from "./components/NewNote";
+import Search from "./components/Search";
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
                 </div>
 
                 <div className="main-section">
+                  <Search />
                   <NewNote />
                   <NotesList />
                 </div>
@@ -38,6 +40,7 @@ const App = () => {
                 </div>
 
                 <div className="main-section">
+                  <Search />
                   <NotesList />
                 </div>
               </div>
