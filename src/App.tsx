@@ -3,11 +3,14 @@ import "./App.scss";
 
 import Media from "react-media";
 
+import { notes } from "./assets/data";
+
 import NotesList from "./components/NotesList";
 import MobileHeader from "./modules/mobile/MobileHeader";
 import DesktopHeader from "./modules/desktop/DesktopHeader";
 import NewNote from "./components/NewNote";
 import Search from "./components/Search";
+import EditNote from "./components/EditNote";
 
 const App = () => {
   return (
@@ -39,9 +42,18 @@ const App = () => {
                   <DesktopHeader />
                 </div>
 
-                <div className="main-section">
+                {/* <div className="main-section">
                   <Search />
                   <NotesList />
+                </div> */}
+
+                <div className="main-section">
+                  <EditNote
+                    title={notes[0].title}
+                    content={notes[0].content}
+                    updated={notes[0].updated}
+                    backgroundColor={notes[0].backgroundColor}
+                  />
                 </div>
               </div>
             )}

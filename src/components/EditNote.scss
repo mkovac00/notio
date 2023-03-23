@@ -1,0 +1,41 @@
+@import "../assets/variables";
+@import "../assets/mixins";
+
+.edit-note_container {
+  width: 100%;
+  height: 100%;
+
+  .edit-note_container-title {
+    font-size: 48px;
+    font-weight: bold;
+
+    @include padding(30px, 0, 0, 24px);
+  }
+
+  .edit-note_section {
+    background-color: $paper-imitation-color;
+    border-left: 40px solid rgb(155, 209, 171);
+    border-radius: 16px;
+    margin-top: 40px;
+    margin-left: 24px;
+    margin-bottom: 40px;
+    margin-right: 80px;
+    height: 65%;
+
+    @include padding(24px, 16px, 16px, 24px);
+
+    .edit-note_title {
+      font-size: 24px;
+      margin-bottom: 24px;
+    }
+
+    .edit-note_content {
+      height: 80%;
+    }
+
+    .edit-note_updated {
+      font-size: 13px;
+      opacity: 0.5;
+    }
+  }
+}
