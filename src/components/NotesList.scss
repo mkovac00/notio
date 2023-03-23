@@ -20,7 +20,7 @@
 @media only screen and (min-width: $medium-screen) {
   .notes-list-container {
     .notes-list-title {
-      padding-left: 16px;
+      @include padding(40px, 0, 24px, 24px);
     }
 
     .notes-list-content {
