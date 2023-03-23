@@ -35,6 +35,8 @@ html {
     grid-template-columns: 100px 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: "Header Main";
+    max-height: 85vh;
+    overflow-y: auto;
 
     margin: 80px;
     border-radius: 16px;
