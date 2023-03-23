@@ -38,7 +38,10 @@ html {
     max-height: 85vh;
     overflow-y: auto;
 
-    margin: 80px;
+    margin-top: 80px;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom: auto;
     border-radius: 16px;
     box-shadow: $box-shadow;
 

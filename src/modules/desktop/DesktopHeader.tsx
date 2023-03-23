@@ -8,9 +8,11 @@ import NewNote from "../../components/NewNote";
 const DesktopHeader = () => {
   return (
     <div className="desktop-header">
-      <p className="desktop-header-logo">Notio</p>
-      <MdDarkMode size={30} />
-      <NewNote />
+      <div className="desktop-header-fixed">
+        <p className="desktop-header-logo">Notio</p>
+        <MdDarkMode size={30} />
+        <NewNote />
+      </div>
     </div>
   );
 };
