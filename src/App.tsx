@@ -31,9 +31,18 @@ const App = () => {
                 </div>
 
                 <div className="main-section">
-                  <Search />
-                  <NewNote />
-                  <NotesList />
+                  <Routes>
+                    <Route
+                      path="/"
+                      element={
+                        <>
+                          <Search />
+                          <NewNote /> <NotesList />
+                        </>
+                      }
+                    ></Route>
+                    <Route path="/note/:nid" element={<EditNote />}></Route>
+                  </Routes>
                 </div>
               </div>
             )}

@@ -30,12 +30,32 @@
     }
 
     .edit-note_content {
-      height: 80%;
+      height: 85%;
     }
 
     .edit-note_updated {
       font-size: 13px;
       opacity: 0.5;
+    }
+  }
+}
+
+@media only screen and (max-width: $small-screen) {
+  .edit-note_container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    .edit-note_container-title {
+      display: none;
+    }
+
+    .edit-note_section {
+      height: 80vh;
+      width: 90%;
+      margin: 0;
+      border-left: none;
+      border-top: 40px solid rgb(155, 209, 171);
     }
   }
 }

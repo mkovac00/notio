@@ -17,6 +17,7 @@ html {
   grid-template-areas:
     "Header"
     "Main";
+  min-height: 100svh;
 
   background-color: $primary-light-color;
 
