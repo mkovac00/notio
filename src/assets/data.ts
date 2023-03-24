@@ -1,17 +1,20 @@
 export const notes = [
   {
+    id: "1",
     title: "DAILY TASKS",
     content: "Finish cleaning up the kitchen, take the trash out, visit mom",
     updated: "February 12, 2023",
     backgroundColor: "#C4E95C",
   },
   {
+    id: "2",
     title: "GROCERY LIST",
     content: "Eggs, Milk, Bread, Coffee, iPhone",
     updated: "February 17, 2023",
     backgroundColor: "#9CEEE9",
   },
   {
+    id: "3",
     title: "GIFT IDEAS GIFT IDEAS GIFT",
     content:
       "A plushie, an iPhone, a keychain, a set of chairs, a new laptop, a bracelet, money Ill just keep writing untilk I Cnanot write anymore cause i need so many lines in this writing help llease i need lines how long do i have to do hits iam onot ure jasd asdka dsakfa sfak fkkks afa  afaskfja fjdskfj sdkks dfjkds jfsdk fskj .",
@@ -19,6 +22,7 @@ export const notes = [
     backgroundColor: "#6CEDBE",
   },
   {
+    id: "4",
     title: "BIRTHDAYS",
     content:
       "Mark - March 19th, Joane - October 10th, Stella - August 1st, Annie - December 5th, Carl - September 3rd",
@@ -26,18 +30,21 @@ export const notes = [
     backgroundColor: "#DEB4FF",
   },
   {
+    id: "5",
     title: "IMPORTANT NOTE",
     content: "You have a date with Alex on Thursday. Do NOT FORGET!!!",
     updated: "February 25, 2023",
     backgroundColor: "#6CEDBE",
   },
   {
+    id: "6",
     title: "VACATION PLACE IDEAS",
     content: "Venice, Madrid, Split, Stockholm, Barcelona",
     updated: "December 11, 2022",
     backgroundColor: "#FF9C96",
   },
   {
+    id: "7",
     title: "GIFT IDEAS",
     content:
       "A plushie, an iPhone, a keychain, a set of chairs, a new laptop, a bracelet, money.",
@@ -45,54 +52,63 @@ export const notes = [
     backgroundColor: "#6CEDBE",
   },
   {
+    id: "8",
     title: "VACATION PLACE IDEAS",
     content: "Venice, Madrid, Split, Stockholm, Barcelona",
     updated: "December 11, 2022",
     backgroundColor: "#FF9C96",
   },
   {
+    id: "9",
     title: "VACATION PLACE IDEAS",
     content: "Venice, Madrid, Split, Stockholm, Barcelona",
     updated: "December 11, 2022",
     backgroundColor: "#FF9C96",
   },
   {
+    id: "10",
     title: "VACATION PLACE IDEAS",
     content: "Venice, Madrid, Split, Stockholm, Barcelona",
     updated: "December 11, 2022",
     backgroundColor: "#FF9C96",
   },
   {
+    id: "11",
     title: "VACATION PLACE IDEAS",
     content: "Venice, Madrid, Split, Stockholm, Barcelona",
     updated: "December 11, 2022",
     backgroundColor: "#FF9C96",
   },
   {
+    id: "12",
     title: "VACATION PLACE IDEAS",
     content: "Venice, Madrid, Split, Stockholm, Barcelona",
     updated: "December 11, 2022",
     backgroundColor: "#FF9C96",
   },
   {
+    id: "13",
     title: "VACATION PLACE IDEAS",
     content: "Venice, Madrid, Split, Stockholm, Barcelona",
     updated: "December 11, 2022",
     backgroundColor: "#FF9C96",
   },
   {
+    id: "14",
     title: "VACATION PLACE IDEAS",
     content: "Venice, Madrid, Split, Stockholm, Barcelona",
     updated: "December 11, 2022",
     backgroundColor: "#FF9C96",
   },
   {
+    id: "15",
     title: "VACATION PLACE IDEAS",
     content: "Venice, Madrid, Split, Stockholm, Barcelona",
     updated: "December 11, 2022",
     backgroundColor: "#FF9C96",
   },
   {
+    id: "16",
     title: "VACATION PLACE IDEAS",
     content: "Venice, Madrid, Split, Stockholm, Barcelona",
     updated: "December 11, 2022",

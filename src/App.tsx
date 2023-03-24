@@ -54,17 +54,7 @@ const App = () => {
                         </>
                       }
                     ></Route>
-                    <Route
-                      path="/note"
-                      element={
-                        <EditNote
-                          title={notes[0].title}
-                          content={notes[0].content}
-                          updated={notes[0].updated}
-                          backgroundColor={notes[0].backgroundColor}
-                        />
-                      }
-                    ></Route>
+                    <Route path="/note/:nid" element={<EditNote />}></Route>
                   </Routes>
                 </div>
               </div>

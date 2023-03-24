@@ -1,21 +1,26 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import "./EditNote.scss";
 
-type NoteProps = {
-  title: string;
-  content: string;
-  updated: string;
-  backgroundColor: string;
-};
+import { notes } from "../assets/data";
 
-const EditNote = (props: NoteProps) => {
+const EditNote = () => {
+  const { nid } = useParams();
+  let currentNote = notes[0];
+
+  notes.forEach((note) => {
+    if (note.id === nid) {
+      currentNote = note;
+    }
+  });
+
   return (
     <div className="edit-note_container">
       <h1 className="edit-note_container-title">Notes</h1>
       <div className="edit-note_section">
-        <h1 className="edit-note_title">{props.title}</h1>
-        <p className="edit-note_content">{props.content}</p>
-        <p className="edit-note_updated">{props.updated}</p>
+        <h1 className="edit-note_title">{currentNote.title}</h1>
+        <p className="edit-note_content">{currentNote.content}</p>
+        <p className="edit-note_updated">{currentNote.updated}</p>
       </div>
     </div>
   );

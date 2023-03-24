@@ -2,6 +2,8 @@ import React from "react";
 import "./NotesList.scss";
 
 import { Link } from "react-router-dom";
+// TODO - implement uuid library to generate unique id's for notes
+// import { v4 as uuidv4 } from "uuid";
 
 import Note from "./Note";
 
@@ -14,7 +16,7 @@ const NotesList = () => {
       <ul className="notes-list-content">
         {notes.map((note) => (
           <li>
-            <Link to="/note" className="notes-list-item">
+            <Link to={`/note/${note.id}`} className="notes-list-item">
               <Note
                 title={note.title}
                 content={note.content}
