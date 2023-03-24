@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.scss";
 
+import { Route, Routes, BrowserRouter } from "react-router-dom";
 import Media from "react-media";
 
 import { notes } from "./assets/data";
@@ -42,18 +43,29 @@ const App = () => {
                   <DesktopHeader />
                 </div>
 
-                {/* <div className="main-section">
-                  <Search />
-                  <NotesList />
-                </div> */}
-
                 <div className="main-section">
-                  <EditNote
-                    title={notes[0].title}
-                    content={notes[0].content}
-                    updated={notes[0].updated}
-                    backgroundColor={notes[0].backgroundColor}
-                  />
+                  <Routes>
+                    <Route
+                      path="/"
+                      element={
+                        <>
+                          <Search />
+                          <NotesList />
+                        </>
+                      }
+                    ></Route>
+                    <Route
+                      path="/note"
+                      element={
+                        <EditNote
+                          title={notes[0].title}
+                          content={notes[0].content}
+                          updated={notes[0].updated}
+                          backgroundColor={notes[0].backgroundColor}
+                        />
+                      }
+                    ></Route>
+                  </Routes>
                 </div>
               </div>
             )}
