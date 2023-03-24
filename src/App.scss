@@ -38,6 +38,7 @@ html {
     grid-template-areas: "Header Main";
     height: 85vh;
     overflow-y: auto;
+    min-height: 85vh;
 
     margin-top: 80px;
     margin-left: 80px;
