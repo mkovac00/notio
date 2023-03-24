@@ -17,11 +17,16 @@
     justify-content: flex-start;
     align-items: center;
 
-    .desktop-header-logo {
-      font-size: 24px;
-      font-weight: bold;
-      margin-top: 24px;
-      margin-bottom: 80px;
+    .desktop-header-logo_link {
+      text-decoration: none;
+      color: $dark-text-color;
+
+      .desktop-header-logo {
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: 24px;
+        margin-bottom: 80px;
+      }
     }
   }
 }

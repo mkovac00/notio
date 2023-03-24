@@ -11,8 +11,13 @@
   align-items: center;
   @include padding(16px, 28px, 16px, 28px);
 
-  .mobile-header-logo {
-    font-size: 28px;
+  .mobile-header-logo_link {
+    text-decoration: none;
+    color: $dark-text-color;
+
+    .mobile-header-logo {
+      font-size: 28px;
+    }
   }
 
   .mobile-dark-mode-btn {
