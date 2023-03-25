@@ -30,12 +30,22 @@
     }
 
     .edit-note_content {
-      height: 85%;
+      height: 80%;
+      width: 95%;
+      resize: none;
+      border: none;
+      background-color: $paper-imitation-color;
+
+      &:focus,
+      &:focus-visible {
+        outline: 1px solid $primary-light-color;
+      }
     }
 
     .edit-note_updated {
       font-size: 13px;
       opacity: 0.5;
+      padding-top: 16px;
     }
   }
 }
