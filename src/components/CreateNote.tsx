@@ -4,8 +4,12 @@ import "./CreateNote.scss";
 
 import { AiOutlineCheckCircle } from "react-icons/ai";
 
+import { getCurrentDate } from "../assets/functions";
+
 const CreateNote = () => {
   const { color } = useParams();
+
+  const placeholderDate = getCurrentDate();
 
   const addNoteToLocalStorage = () => {
     let allNotes = JSON.parse(localStorage.getItem("notes") || "[]");
@@ -23,7 +27,7 @@ const CreateNote = () => {
           id: Date.now(),
           title: noteTitle.value,
           content: noteContent.value,
-          updated: "February 17, 2023",
+          updated: getCurrentDate(),
           backgroundColor: "#" + color,
         };
 
@@ -40,7 +44,13 @@ const CreateNote = () => {
   return (
     <div className="create-note_container">
       <h1 className="create-note_container-title">Creating a note</h1>
-      <div className="create-note_section">
+      <div
+        className="create-note_section"
+        style={{
+          borderLeftColor: "#" + color,
+          borderTopColor: "#" + color,
+        }}
+      >
         <AiOutlineCheckCircle
           size={25}
           className="create-note_btn"
@@ -56,7 +66,7 @@ const CreateNote = () => {
           className="create-note_content"
           placeholder="Write something inside your note"
         ></textarea>
-        <p className="create-note_updated">February 17, 2023</p>
+        <p className="create-note_updated">{placeholderDate}</p>
       </div>
     </div>
   );
