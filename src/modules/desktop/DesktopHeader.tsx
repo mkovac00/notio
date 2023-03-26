@@ -14,7 +14,9 @@ const DesktopHeader = () => {
           <p className="desktop-header-logo">Notio</p>
         </Link>
         <MdDarkMode size={30} />
-        <NewNote />
+        <Link to="/note/create" className="desktop-header-new_link">
+          <NewNote />
+        </Link>
       </div>
     </div>
   );

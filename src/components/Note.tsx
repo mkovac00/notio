@@ -2,6 +2,7 @@ import React from "react";
 import "./Note.scss";
 
 type NoteProps = {
+  id: string;
   title: string;
   content: string;
   updated: string;

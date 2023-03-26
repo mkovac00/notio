@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.scss";
 
-import { Route, Routes, BrowserRouter } from "react-router-dom";
+import { Route, Routes, BrowserRouter, Link } from "react-router-dom";
 import Media from "react-media";
 
 import { notes } from "./assets/data";
@@ -12,6 +12,7 @@ import DesktopHeader from "./modules/desktop/DesktopHeader";
 import NewNote from "./components/NewNote";
 import Search from "./components/Search";
 import EditNote from "./components/EditNote";
+import CreateNote from "./components/CreateNote";
 
 const App = () => {
   return (
@@ -37,11 +38,15 @@ const App = () => {
                       element={
                         <>
                           <Search />
-                          <NewNote /> <NotesList />
+                          <Link to="/note/create">
+                            <NewNote />
+                          </Link>
+                          <NotesList />
                         </>
                       }
                     ></Route>
                     <Route path="/note/:nid" element={<EditNote />}></Route>
+                    <Route path="/note/create" element={<CreateNote />}></Route>
                   </Routes>
                 </div>
               </div>
@@ -64,6 +69,7 @@ const App = () => {
                       }
                     ></Route>
                     <Route path="/note/:nid" element={<EditNote />}></Route>
+                    <Route path="/note/create" element={<CreateNote />}></Route>
                   </Routes>
                 </div>
               </div>

@@ -16,6 +16,19 @@
     flex-flow: wrap;
     list-style-type: none;
 
+    .notes-list_no-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 50vh;
+
+      .notes-list_no-content-message {
+        font-size: 24px;
+        @include padding(0, 10vw, 0, 10vw);
+      }
+    }
+
     li {
       .notes-list-item {
         text-decoration: none;
@@ -33,6 +46,19 @@
 
     .notes-list-content {
       justify-content: flex-start;
+
+      .notes-list_no-content {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        height: 50vh;
+
+        .notes-list_no-content-message {
+          font-size: 24px;
+          @include padding(0, 24px, 0, 24px);
+        }
+      }
     }
   }
 }
