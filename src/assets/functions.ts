@@ -19,7 +19,7 @@ export const getCurrentDate = () => {
   let month = date.getMonth();
   let year = date.getFullYear();
 
-  let monthString = monthsStringNames[month + 1];
+  let monthString = monthsStringNames[month];
 
   return `${monthString} ${day}, ${year}`;
 };

@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import "./EditNote.scss";
 
 import { AiOutlineCheckCircle } from "react-icons/ai";
+import { getCurrentDate } from "../assets/functions";
 
 const EditNote = () => {
   const { nid } = useParams();
@@ -42,6 +43,7 @@ const EditNote = () => {
       if (noteContent.value != null && noteContent.value !== "") {
         currentNote.title = noteTitle.value;
         currentNote.content = noteContent.value;
+        currentNote.updated = getCurrentDate();
       }
     }
 
