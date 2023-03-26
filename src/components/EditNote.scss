@@ -13,6 +13,7 @@
   }
 
   .edit-note_section {
+    position: relative;
     background-color: $paper-imitation-color;
     border-left: 40px solid rgb(155, 209, 171);
     border-radius: 16px;
@@ -23,6 +24,16 @@
     height: 65%;
 
     @include padding(24px, 16px, 16px, 24px);
+
+    .edit-note_btn {
+      position: absolute;
+      top: 26px;
+      left: -32px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
 
     .edit-note_title {
       font-size: 24px;
@@ -76,6 +87,12 @@
       margin: 0;
       border-left: none;
       border-top: 40px solid rgb(155, 209, 171);
+
+      .edit-note_btn {
+        position: absolute;
+        top: -32px;
+        left: 16px;
+      }
     }
   }
 }
