@@ -15,7 +15,7 @@
   .edit-note_section {
     position: relative;
     background-color: $paper-imitation-color;
-    border-left: 40px solid rgb(155, 209, 171);
+    border-left: 40px solid;
     border-radius: 16px;
     margin-top: 40px;
     margin-left: 24px;
@@ -86,7 +86,7 @@
       width: 90%;
       margin: 0;
       border-left: none;
-      border-top: 40px solid rgb(155, 209, 171);
+      border-top: 40px solid;
 
       .edit-note_btn {
         position: absolute;

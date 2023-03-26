@@ -38,15 +38,16 @@ const App = () => {
                       element={
                         <>
                           <Search />
-                          <Link to="/note/create">
-                            <NewNote />
-                          </Link>
+                          <NewNote />
                           <NotesList />
                         </>
                       }
                     ></Route>
                     <Route path="/note/:nid" element={<EditNote />}></Route>
-                    <Route path="/note/create" element={<CreateNote />}></Route>
+                    <Route
+                      path="/note/create/:color"
+                      element={<CreateNote />}
+                    ></Route>
                   </Routes>
                 </div>
               </div>
@@ -69,7 +70,10 @@ const App = () => {
                       }
                     ></Route>
                     <Route path="/note/:nid" element={<EditNote />}></Route>
-                    <Route path="/note/create" element={<CreateNote />}></Route>
+                    <Route
+                      path="/note/create/:color"
+                      element={<CreateNote />}
+                    ></Route>
                   </Routes>
                 </div>
               </div>

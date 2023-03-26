@@ -1,9 +1,12 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import "./CreateNote.scss";
 
 import { AiOutlineCheckCircle } from "react-icons/ai";
 
 const CreateNote = () => {
+  const { color } = useParams();
+
   const addNoteToLocalStorage = () => {
     let allNotes = JSON.parse(localStorage.getItem("notes") || "[]");
 
@@ -21,7 +24,7 @@ const CreateNote = () => {
           title: noteTitle.value,
           content: noteContent.value,
           updated: "February 17, 2023",
-          backgroundColor: "#C4E95C",
+          backgroundColor: "#" + color,
         };
 
         allNotes.push(createdNote);

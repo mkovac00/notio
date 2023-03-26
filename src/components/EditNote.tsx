@@ -55,7 +55,13 @@ const EditNote = () => {
   return (
     <div className="edit-note_container">
       <h1 className="edit-note_container-title">Viewing note</h1>
-      <div className="edit-note_section">
+      <div
+        className="edit-note_section"
+        style={{
+          borderLeftColor: currentNote.backgroundColor,
+          borderTopColor: currentNote.backgroundColor,
+        }}
+      >
         <AiOutlineCheckCircle
           size={25}
           className="edit-note_btn"

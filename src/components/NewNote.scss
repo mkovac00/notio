@@ -16,8 +16,27 @@
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    background-color: red;
     margin-left: 24px;
+  }
+
+  .colored-circle-1 {
+    background-color: $note-color-1;
+  }
+
+  .colored-circle-2 {
+    background-color: $note-color-2;
+  }
+
+  .colored-circle-3 {
+    background-color: $note-color-3;
+  }
+
+  .colored-circle-4 {
+    background-color: $note-color-4;
+  }
+
+  .colored-circle-5 {
+    background-color: $note-color-5;
   }
 }
 
