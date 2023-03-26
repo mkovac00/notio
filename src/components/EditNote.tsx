@@ -2,14 +2,19 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import "./EditNote.scss";
 
-import { notes } from "../assets/data";
-
 const EditNote = () => {
   const { nid } = useParams();
-  let currentNote = notes[0];
+  let currentNote = {
+    id: "1234567890",
+    title: "Something went wrong.",
+    content: "Something really went wrong.",
+    updated: "January 1, 1000",
+    backgroundColor: "#DEB4FF",
+  };
 
-  notes.forEach((note) => {
-    if (note.id === nid) {
+  let allNotes = JSON.parse(localStorage.getItem("notes") || "[]");
+  allNotes.forEach((note: any) => {
+    if (note.id.toString() === nid) {
       currentNote = note;
     }
   });
