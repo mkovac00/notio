@@ -1,3 +1,5 @@
+import { NoteSchema } from "../models/NoteSchema";
+
 const monthsStringNames = [
   "January",
   "February",
@@ -22,4 +24,8 @@ export const getCurrentDate = () => {
   let monthString = monthsStringNames[month];
 
   return `${monthString} ${day}, ${year}`;
+};
+
+export const removeDuplicates = (array: Array<typeof NoteSchema>) => {
+  return array.filter((item, index) => array.indexOf(item) === index);
 };

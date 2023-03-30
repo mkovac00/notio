@@ -1,18 +1,14 @@
 import React from "react";
 import "./App.scss";
 
-import { Route, Routes, BrowserRouter, Link } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Media from "react-media";
-
-import { notes } from "./assets/data";
-
-import NotesList from "./components/NotesList";
 import MobileHeader from "./modules/mobile/MobileHeader";
 import DesktopHeader from "./modules/desktop/DesktopHeader";
 import NewNote from "./components/NewNote";
-import Search from "./components/Search";
 import EditNote from "./components/EditNote";
 import CreateNote from "./components/CreateNote";
+import NotesSection from "./components/NotesSection";
 
 const App = () => {
   return (
@@ -37,9 +33,8 @@ const App = () => {
                       path="/"
                       element={
                         <>
-                          <Search />
                           <NewNote />
-                          <NotesList />
+                          <NotesSection />
                         </>
                       }
                     ></Route>
@@ -60,15 +55,7 @@ const App = () => {
 
                 <div className="main-section">
                   <Routes>
-                    <Route
-                      path="/"
-                      element={
-                        <>
-                          <Search />
-                          <NotesList />
-                        </>
-                      }
-                    ></Route>
+                    <Route path="/" element={<NotesSection />}></Route>
                     <Route path="/note/:nid" element={<EditNote />}></Route>
                     <Route
                       path="/note/create/:color"
