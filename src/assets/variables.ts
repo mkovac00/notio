@@ -15,5 +15,5 @@ export const monthsStringNames = [
 
 export const buttonColors = {
   lightMode: "#000000",
-  darkMode: "#e0e0e0",
+  darkMode: "#cfcfcf",
 };

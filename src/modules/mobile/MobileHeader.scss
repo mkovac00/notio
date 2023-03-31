@@ -13,19 +13,16 @@
   align-items: center;
   @include padding(16px, 28px, 16px, 28px);
 
-  .mobile-header-logo_link {
-    text-decoration: none;
+  .mobile-header-logo {
+    font-size: 28px;
+
     @include themify($themes) {
       color: themed("dark-text-color");
     }
-
-    .mobile-header-logo {
-      font-size: 28px;
-    }
   }
 
-  .mobile-theme-mode-btn {
-    font-size: 28px;
+  .mobile-nav-btn {
+    margin-left: 24px;
 
     &:hover {
       cursor: pointer;

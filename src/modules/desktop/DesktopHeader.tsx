@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { MdDarkMode } from "react-icons/md";
+import { AiFillHome } from "react-icons/ai";
 import { ThemeContext } from "../../context/theme-context";
 import { buttonColors } from "../../assets/variables";
 
@@ -19,11 +20,19 @@ const DesktopHeader = () => {
   return (
     <div className="desktop-header">
       <div className="desktop-header-fixed">
-        <Link to="/" className="desktop-header-logo_link">
-          <p className="desktop-header-logo">Notio</p>
+        <p className="desktop-header-logo">Notio</p>
+        <Link to="/">
+          <AiFillHome
+            className="desktop-nav-btn"
+            size={30}
+            color={
+              theme === "light" ? buttonColors.lightMode : buttonColors.darkMode
+            }
+          />
         </Link>
+
         <MdDarkMode
-          className="desktop-theme-mode-btn"
+          className="desktop-theme-mode-btn desktop-nav-btn"
           size={30}
           color={
             theme === "light" ? buttonColors.lightMode : buttonColors.darkMode

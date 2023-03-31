@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AiFillPlusCircle } from "react-icons/ai";
 import { ThemeContext } from "../context/theme-context";
+import { buttonColors } from "../assets/variables";
 
 import "./NewNote.scss";
 
@@ -12,7 +13,9 @@ const NewNote = () => {
     <div className="new-note-picker">
       <AiFillPlusCircle
         className="new-note-btn"
-        color={theme === "light" ? "#000000" : "#e0e0e0"}
+        color={
+          theme === "light" ? buttonColors.lightMode : buttonColors.darkMode
+        }
       />
       <Link to="/note/create/c4e95c/607341">
         <div className="colored-circle colored-circle-1"></div>
