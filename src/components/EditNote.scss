@@ -8,13 +8,17 @@
   .edit-note_container-title {
     font-size: 48px;
     font-weight: bold;
-
+    @include themify($themes) {
+      color: themed("dark-text-color");
+    }
     @include padding(30px, 0, 0, 24px);
   }
 
   .edit-note_section {
     position: relative;
-    background-color: $paper-imitation-color;
+    @include themify($themes) {
+      background-color: themed("paper-imitation-color");
+    }
     border-left: 40px solid;
     border-radius: 16px;
     margin-top: 40px;
@@ -41,12 +45,19 @@
       height: 10%;
       resize: none;
       border: none;
-      background-color: $paper-imitation-color;
+      @include themify($themes) {
+        background-color: themed("paper-imitation-color");
+      }
+      @include themify($themes) {
+        color: themed("dark-text-color");
+      }
       @include text-overflow-single-line(90%);
 
       &:focus,
       &:focus-visible {
-        outline: 1px solid $primary-light-color;
+        @include themify($themes) {
+          outline: 1px solid themed("primary-light-color");
+        }
         overflow: auto;
       }
     }
@@ -56,11 +67,18 @@
       width: 95%;
       resize: none;
       border: none;
-      background-color: $paper-imitation-color;
+      @include themify($themes) {
+        color: themed("dark-text-color");
+      }
+      @include themify($themes) {
+        background-color: themed("paper-imitation-color");
+      }
 
       &:focus,
       &:focus-visible {
-        outline: 1px solid $primary-light-color;
+        @include themify($themes) {
+          outline: 1px solid themed("primary-light-color");
+        }
       }
     }
 
@@ -68,6 +86,9 @@
       font-size: 13px;
       opacity: 0.5;
       padding-top: 16px;
+      @include themify($themes) {
+        color: themed("dark-text-color");
+      }
     }
   }
 }

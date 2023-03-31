@@ -1,19 +1,29 @@
-import React from "react";
+import { useContext } from "react";
 import "./Note.scss";
+import { ThemeContext } from "../context/theme-context";
 
 type NoteProps = {
   id: string;
   title: string;
   content: string;
   updated: string;
-  backgroundColor: string;
+  backgroundColor: {
+    light: string;
+    dark: string;
+  };
 };
 
 const Note = (props: NoteProps) => {
+  const { theme } = useContext(ThemeContext);
+
   return (
     <div
       className="note-container"
-      style={{ backgroundColor: props.backgroundColor }}
+      style={
+        theme === "light"
+          ? { backgroundColor: props.backgroundColor.light }
+          : { backgroundColor: props.backgroundColor.dark }
+      }
     >
       <h1 className="note-title">{props.title}</h1>
       <div className="note-content-wrapper">

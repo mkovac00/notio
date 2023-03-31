@@ -5,7 +5,9 @@
   position: fixed;
   z-index: 3;
   width: 100%;
-  background-color: $primary-light-color;
+  @include themify($themes) {
+    background-color: themed("primary-light-color");
+  }
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13,14 +15,20 @@
 
   .mobile-header-logo_link {
     text-decoration: none;
-    color: $dark-text-color;
+    @include themify($themes) {
+      color: themed("dark-text-color");
+    }
 
     .mobile-header-logo {
       font-size: 28px;
     }
   }
 
-  .mobile-dark-mode-btn {
+  .mobile-theme-mode-btn {
     font-size: 28px;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 }

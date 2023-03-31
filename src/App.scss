@@ -1,14 +1,11 @@
 @import "./assets/variables";
+@import "./assets/mixins";
 
 * {
   font-family: "Nunito", sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-html {
-  background-color: $light-gray-color;
 }
 
 .app {
@@ -19,7 +16,9 @@ html {
     "Main";
   min-height: 100svh;
 
-  background-color: $primary-light-color;
+  @include themify($themes) {
+    background-color: themed("primary-light-color");
+  }
 
   .header-section {
     grid-area: Header;
@@ -46,6 +45,10 @@ html {
     margin-bottom: auto;
     border-radius: 16px;
     box-shadow: $box-shadow;
+
+    @include themify($themes) {
+      background-color: themed("primary-light-color");
+    }
 
     .header-section {
       grid-area: Header;

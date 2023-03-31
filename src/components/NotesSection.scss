@@ -10,6 +10,12 @@
   box-shadow: $box-shadow;
   padding: 16px;
   margin-left: 10vw;
+  @include themify($themes) {
+    background-color: themed("secondary-light-color");
+  }
+  @include themify($themes) {
+    color: themed("dark-text-color");
+  }
 
   &:focus {
     outline: none;
@@ -28,6 +34,9 @@
   .notes-list-title {
     font-size: 48px;
     font-weight: bold;
+    @include themify($themes) {
+      color: themed("dark-text-color");
+    }
     @include padding(30px, 0, 0, 10vw);
   }
 
@@ -55,7 +64,9 @@
     li {
       .notes-list-item {
         text-decoration: none;
-        color: $dark-text-color;
+        @include themify($themes) {
+          color: themed("dark-text-color");
+        }
       }
     }
   }

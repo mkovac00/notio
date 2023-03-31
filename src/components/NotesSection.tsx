@@ -8,7 +8,7 @@ import { removeDuplicates } from "../assets/functions";
 
 let searchedNotes: typeof NoteSchema[] = [];
 
-const FixTry = () => {
+const NotesSection = () => {
   const [searchValue, setSearchValue] = useState("");
   const [notesState, setNotesState] = useState<typeof NoteSchema[]>([]);
 
@@ -92,4 +92,4 @@ const FixTry = () => {
   );
 };
 
-export default FixTry;
+export default NotesSection;

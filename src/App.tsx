@@ -1,8 +1,11 @@
-import React from "react";
+import { useState } from "react";
 import "./App.scss";
 
+// React/npm imports
 import { Route, Routes } from "react-router-dom";
 import Media from "react-media";
+
+// Component imports
 import MobileHeader from "./modules/mobile/MobileHeader";
 import DesktopHeader from "./modules/desktop/DesktopHeader";
 import NewNote from "./components/NewNote";
@@ -10,65 +13,72 @@ import EditNote from "./components/EditNote";
 import CreateNote from "./components/CreateNote";
 import NotesSection from "./components/NotesSection";
 
+// assets/context imports
+import { ThemeContext } from "./context/theme-context";
+
 const App = () => {
+  const [theme, setTheme] = useState("dark");
+
   return (
-    <>
-      <Media
-        queries={{
-          small: "(max-width: 1023px)",
-          medium: "(min-width: 1024px)",
-        }}
-      >
-        {(matches) => (
-          <>
-            {matches.small && (
-              <div className="app">
-                <div className="header-section">
-                  <MobileHeader />
-                </div>
+    <ThemeContext.Provider value={{ theme, setTheme }}>
+      <div className={`theme-${theme}`}>
+        <Media
+          queries={{
+            small: "(max-width: 1023px)",
+            medium: "(min-width: 1024px)",
+          }}
+        >
+          {(matches) => (
+            <>
+              {matches.small && (
+                <div className="app">
+                  <div className="header-section">
+                    <MobileHeader />
+                  </div>
 
-                <div className="main-section">
-                  <Routes>
-                    <Route
-                      path="/"
-                      element={
-                        <>
-                          <NewNote />
-                          <NotesSection />
-                        </>
-                      }
-                    ></Route>
-                    <Route path="/note/:nid" element={<EditNote />}></Route>
-                    <Route
-                      path="/note/create/:color"
-                      element={<CreateNote />}
-                    ></Route>
-                  </Routes>
+                  <div className="main-section">
+                    <Routes>
+                      <Route
+                        path="/"
+                        element={
+                          <>
+                            <NewNote />
+                            <NotesSection />
+                          </>
+                        }
+                      ></Route>
+                      <Route path="/note/:nid" element={<EditNote />}></Route>
+                      <Route
+                        path="/note/create/:color/:colorDark"
+                        element={<CreateNote />}
+                      ></Route>
+                    </Routes>
+                  </div>
                 </div>
-              </div>
-            )}
-            {matches.medium && (
-              <div className="app">
-                <div className="header-section">
-                  <DesktopHeader />
-                </div>
+              )}
+              {matches.medium && (
+                <div className="app">
+                  <div className="header-section">
+                    <DesktopHeader />
+                  </div>
 
-                <div className="main-section">
-                  <Routes>
-                    <Route path="/" element={<NotesSection />}></Route>
-                    <Route path="/note/:nid" element={<EditNote />}></Route>
-                    <Route
-                      path="/note/create/:color"
-                      element={<CreateNote />}
-                    ></Route>
-                  </Routes>
+                  <div className="main-section">
+                    <Routes>
+                      <Route path="/" element={<NotesSection />}></Route>
+                      <Route path="/note/:nid" element={<EditNote />}></Route>
+                      <Route
+                        path="/note/create/:color/:colorDark"
+                        element={<CreateNote />}
+                      ></Route>
+                    </Routes>
+                  </div>
                 </div>
-              </div>
-            )}
-          </>
-        )}
-      </Media>
-    </>
+              )}
+            </>
+          )}
+        </Media>
+      </div>
+    </ThemeContext.Provider>
   );
 };
 

@@ -1,13 +1,20 @@
-import React from "react";
+import { useContext } from "react";
 import { useParams } from "react-router-dom";
 import "./CreateNote.scss";
 
 import { AiOutlineCheckCircle } from "react-icons/ai";
 
 import { getCurrentDate } from "../assets/functions";
+import { ThemeContext } from "../context/theme-context";
+
+const buttonColors = {
+  lightMode: "#000000",
+  darkMode: "#e0e0e0",
+};
 
 const CreateNote = () => {
-  const { color } = useParams();
+  const { color, colorDark } = useParams();
+  const { theme } = useContext(ThemeContext);
 
   const placeholderDate = getCurrentDate();
 
@@ -28,7 +35,10 @@ const CreateNote = () => {
           title: noteTitle.value,
           content: noteContent.value,
           updated: getCurrentDate(),
-          backgroundColor: "#" + color,
+          backgroundColor: {
+            light: "#" + color,
+            dark: "#" + colorDark,
+          },
         };
 
         allNotes.push(createdNote);
@@ -46,15 +56,25 @@ const CreateNote = () => {
       <h1 className="create-note_container-title">Creating a note</h1>
       <div
         className="create-note_section"
-        style={{
-          borderLeftColor: "#" + color,
-          borderTopColor: "#" + color,
-        }}
+        style={
+          theme === "light"
+            ? {
+                borderLeftColor: "#" + color,
+                borderTopColor: "#" + color,
+              }
+            : {
+                borderLeftColor: "#" + colorDark,
+                borderTopColor: "#" + colorDark,
+              }
+        }
       >
         <AiOutlineCheckCircle
           size={25}
           className="create-note_btn"
           onClick={addNoteToLocalStorage}
+          color={
+            theme === "light" ? buttonColors.lightMode : buttonColors.darkMode
+          }
         />
         <textarea
           id="create-note_title-id"

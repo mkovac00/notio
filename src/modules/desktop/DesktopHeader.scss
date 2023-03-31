@@ -1,4 +1,5 @@
 @import "../../assets/variables";
+@import "../../assets/mixins";
 
 .desktop-header {
   position: relative;
@@ -6,7 +7,9 @@
   left: 0;
   width: 100px;
   height: 100%;
-  border-right: 2px solid $light-gray-color;
+  @include themify($themes) {
+    border-right: 2px solid themed("light-gray-color");
+  }
 
   .desktop-header-fixed {
     position: fixed;
@@ -19,13 +22,21 @@
 
     .desktop-header-logo_link {
       text-decoration: none;
-      color: $dark-text-color;
+      @include themify($themes) {
+        color: themed("dark-text-color");
+      }
 
       .desktop-header-logo {
         font-size: 24px;
         font-weight: bold;
         margin-top: 24px;
         margin-bottom: 80px;
+      }
+    }
+
+    .desktop-theme-mode-btn {
+      &:hover {
+        cursor: pointer;
       }
     }
   }

@@ -3,17 +3,39 @@ $small-screen: 480px;
 $medium-screen: 1024px;
 $large-screen: 1500px;
 
-$primary-light-color: #f8f8f8;
-$light-gray-color: #bec9cd;
-$paper-imitation-color: #faedca;
+$html-background-color: #bec9cd;
 
-$dark-text-color: #000000;
+$themes: (
+  light: (
+    primary-light-color: #f8f8f8,
+    light-gray-color: #bec9cd,
+    paper-imitation-color: #faedca,
 
-$note-color-1: #c4e95c;
-$note-color-2: #ff9c96;
-$note-color-3: #6cedbe;
-$note-color-4: #deb4ff;
-$note-color-5: #9ceee9;
+    dark-text-color: #000000,
 
-// $box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    note-color-1: #c4e95c,
+    note-color-2: #ff9c96,
+    note-color-3: #6cedbe,
+    note-color-4: #deb4ff,
+    note-color-5: #9ceee9,
+
+    secondary-light-color: #fdfbfb,
+  ),
+  dark: (
+    primary-light-color: #303030,
+    light-gray-color: #6b6b6b,
+    paper-imitation-color: #6b6b6b,
+
+    dark-text-color: #cfcfcf,
+
+    note-color-1: #607341,
+    note-color-2: #603c3a,
+    note-color-3: #3f705e,
+    note-color-4: #614a73,
+    note-color-5: #397078,
+
+    secondary-light-color: #666666,
+  ),
+);
+
 $box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;

@@ -3,5 +3,8 @@ export const NoteSchema = {
   title: "" as string,
   content: "" as string,
   updated: "" as string,
-  backgroundColor: "" as string,
+  backgroundColor: {
+    light: "",
+    dark: "",
+  },
 };
