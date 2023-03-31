@@ -1,16 +1,12 @@
 import { useContext } from "react";
-import "./DesktopHeader.scss";
-
 import { Link } from "react-router-dom";
 import { MdDarkMode } from "react-icons/md";
+import { ThemeContext } from "../../context/theme-context";
+import { buttonColors } from "../../assets/variables";
 
 import NewNote from "../../components/NewNote";
-import { ThemeContext } from "../../context/theme-context";
 
-const buttonColors = {
-  lightMode: "#000000",
-  darkMode: "#e0e0e0",
-};
+import "./DesktopHeader.scss";
 
 const DesktopHeader = () => {
   const { theme, setTheme } = useContext(ThemeContext);

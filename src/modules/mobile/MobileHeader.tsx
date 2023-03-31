@@ -1,14 +1,10 @@
 import { useContext } from "react";
-import "./MobileHeader.scss";
-
 import { Link } from "react-router-dom";
 import { MdDarkMode } from "react-icons/md";
 import { ThemeContext } from "../../context/theme-context";
+import { buttonColors } from "../../assets/variables";
 
-const buttonColors = {
-  lightMode: "#000000",
-  darkMode: "#e0e0e0",
-};
+import "./MobileHeader.scss";
 
 const MobileHeader = () => {
   const { theme, setTheme } = useContext(ThemeContext);

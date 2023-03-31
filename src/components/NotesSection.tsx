@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import "./NotesSection.scss";
-
-import Note from "./Note";
 import { NoteSchema } from "../models/NoteSchema";
 import { removeDuplicates } from "../assets/functions";
+
+import Note from "./Note";
+
+import "./NotesSection.scss";
 
 let searchedNotes: typeof NoteSchema[] = [];
 

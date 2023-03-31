@@ -1,7 +1,5 @@
-import { useState } from "react";
-import "./App.scss";
-
 // React/npm imports
+import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Media from "react-media";
 
@@ -13,8 +11,11 @@ import EditNote from "./components/EditNote";
 import CreateNote from "./components/CreateNote";
 import NotesSection from "./components/NotesSection";
 
-// assets/context imports
+// Assets/context imports
 import { ThemeContext } from "./context/theme-context";
+
+// Style files import
+import "./App.scss";
 
 const App = () => {
   const [theme, setTheme] = useState("dark");

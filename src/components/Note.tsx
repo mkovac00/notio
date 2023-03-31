@@ -1,6 +1,7 @@
 import { useContext } from "react";
-import "./Note.scss";
 import { ThemeContext } from "../context/theme-context";
+
+import "./Note.scss";
 
 type NoteProps = {
   id: string;

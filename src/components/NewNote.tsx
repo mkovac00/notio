@@ -1,9 +1,9 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-import "./NewNote.scss";
-
 import { AiFillPlusCircle } from "react-icons/ai";
 import { ThemeContext } from "../context/theme-context";
+
+import "./NewNote.scss";
 
 const NewNote = () => {
   const { theme } = useContext(ThemeContext);

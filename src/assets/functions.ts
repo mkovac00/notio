@@ -1,19 +1,5 @@
 import { NoteSchema } from "../models/NoteSchema";
-
-const monthsStringNames = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
-];
+import { monthsStringNames } from "./variables";
 
 export const getCurrentDate = () => {
   const date = new Date();

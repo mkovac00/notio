@@ -1,15 +1,11 @@
 import { useContext } from "react";
 import { useParams } from "react-router-dom";
-import "./EditNote.scss";
-
 import { AiOutlineCheckCircle } from "react-icons/ai";
 import { getCurrentDate } from "../assets/functions";
 import { ThemeContext } from "../context/theme-context";
+import { buttonColors } from "../assets/variables";
 
-const buttonColors = {
-  lightMode: "#000000",
-  darkMode: "#e0e0e0",
-};
+import "./EditNote.scss";
 
 const EditNote = () => {
   const { nid } = useParams();
