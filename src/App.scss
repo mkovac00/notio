@@ -17,7 +17,7 @@
   min-height: 100svh;
 
   @include themify($themes) {
-    background-color: themed("primary-light-color");
+    background-color: themed("primary-color");
   }
 
   .header-section {
@@ -47,7 +47,7 @@
     box-shadow: $box-shadow;
 
     @include themify($themes) {
-      background-color: themed("primary-light-color");
+      background-color: themed("primary-color");
     }
 
     .header-section {

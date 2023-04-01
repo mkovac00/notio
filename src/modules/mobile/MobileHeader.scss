@@ -6,7 +6,7 @@
   z-index: 3;
   width: 100%;
   @include themify($themes) {
-    background-color: themed("primary-light-color");
+    background-color: themed("primary-color");
   }
   display: flex;
   justify-content: space-between;
@@ -17,7 +17,7 @@
     font-size: 28px;
 
     @include themify($themes) {
-      color: themed("dark-text-color");
+      color: themed("primary-text-color");
     }
   }
 

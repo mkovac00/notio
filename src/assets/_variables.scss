@@ -7,11 +7,11 @@ $html-background-color: #bec9cd;
 
 $themes: (
   light: (
-    primary-light-color: #f8f8f8,
-    light-gray-color: #bec9cd,
+    primary-color: #f8f8f8,
+    secondary-color: #bec9cd,
     paper-imitation-color: #faedca,
 
-    dark-text-color: #000000,
+    primary-text-color: #000000,
 
     note-color-1: #c4e95c,
     note-color-2: #ff9c96,
@@ -19,14 +19,14 @@ $themes: (
     note-color-4: #deb4ff,
     note-color-5: #9ceee9,
 
-    secondary-light-color: #fdfbfb,
+    bright-color: #fdfbfb,
   ),
   dark: (
-    primary-light-color: #303030,
-    light-gray-color: #6b6b6b,
+    primary-color: #303030,
+    secondary-color: #6b6b6b,
     paper-imitation-color: #6b6b6b,
 
-    dark-text-color: #cfcfcf,
+    primary-text-color: #cfcfcf,
 
     note-color-1: #607341,
     note-color-2: #603c3a,
@@ -34,7 +34,7 @@ $themes: (
     note-color-4: #614a73,
     note-color-5: #397078,
 
-    secondary-light-color: #666666,
+    bright-color: #666666,
   ),
 );
 

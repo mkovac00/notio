@@ -11,10 +11,10 @@
   padding: 16px;
   margin-left: 10vw;
   @include themify($themes) {
-    background-color: themed("secondary-light-color");
+    background-color: themed("bright-color");
   }
   @include themify($themes) {
-    color: themed("dark-text-color");
+    color: themed("primary-text-color");
   }
 
   &:focus {
@@ -35,7 +35,7 @@
     font-size: 48px;
     font-weight: bold;
     @include themify($themes) {
-      color: themed("dark-text-color");
+      color: themed("primary-text-color");
     }
     @include padding(30px, 0, 0, 10vw);
   }
@@ -65,7 +65,7 @@
       .notes-list-item {
         text-decoration: none;
         @include themify($themes) {
-          color: themed("dark-text-color");
+          color: themed("primary-text-color");
         }
       }
     }

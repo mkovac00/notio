@@ -9,7 +9,7 @@
     font-size: 48px;
     font-weight: bold;
     @include themify($themes) {
-      color: themed("dark-text-color");
+      color: themed("primary-text-color");
     }
     @include padding(30px, 0, 0, 24px);
   }
@@ -46,7 +46,7 @@
       resize: none;
       border: none;
       @include themify($themes) {
-        color: themed("dark-text-color");
+        color: themed("primary-text-color");
       }
       @include themify($themes) {
         background-color: themed("paper-imitation-color");
@@ -56,7 +56,7 @@
       &:focus,
       &:focus-visible {
         @include themify($themes) {
-          outline: 1px solid themed("primary-light-color");
+          outline: 1px solid themed("primary-color");
         }
         overflow: auto;
       }
@@ -68,7 +68,7 @@
       resize: none;
       border: none;
       @include themify($themes) {
-        color: themed("dark-text-color");
+        color: themed("primary-text-color");
       }
       @include themify($themes) {
         background-color: themed("paper-imitation-color");
@@ -77,7 +77,7 @@
       &:focus,
       &:focus-visible {
         @include themify($themes) {
-          outline: 1px solid themed("primary-light-color");
+          outline: 1px solid themed("primary-color");
         }
       }
     }
@@ -87,7 +87,7 @@
       opacity: 0.5;
       padding-top: 16px;
       @include themify($themes) {
-        color: themed("dark-text-color");
+        color: themed("primary-text-color");
       }
     }
   }

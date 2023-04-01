@@ -8,7 +8,7 @@
   width: 100px;
   height: 100%;
   @include themify($themes) {
-    border-right: 2px solid themed("light-gray-color");
+    border-right: 2px solid themed("secondary-color");
   }
 
   .desktop-header-fixed {
@@ -27,7 +27,7 @@
       margin-bottom: 80px;
 
       @include themify($themes) {
-        color: themed("dark-text-color");
+        color: themed("primary-text-color");
       }
     }
 
