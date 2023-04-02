@@ -18,7 +18,7 @@ import { ThemeContext } from "./context/theme-context";
 import "./App.scss";
 
 const App = () => {
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState("light");
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>

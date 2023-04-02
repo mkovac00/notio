@@ -2,6 +2,7 @@
 @import "../assets/mixins";
 
 .new-note-picker {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -10,10 +11,27 @@
   padding-bottom: 40px;
 
   .new-note-btn {
-    font-size: 32px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .new-note-btn-close {
+    display: none;
+  }
+
+  .show-btn {
+    display: inline-block;
+  }
+
+  .hide-btn {
+    display: none;
   }
 
   .colored-circle {
+    position: absolute;
+    top: 8px;
+    left: 32px;
     width: 15px;
     height: 15px;
     border-radius: 50%;
@@ -60,10 +78,13 @@
     padding-top: 0;
 
     .new-note-btn {
-      font-size: 32px;
+      z-index: 6;
     }
 
     .colored-circle {
+      position: absolute;
+      top: 0px;
+      left: 8px;
       margin-top: 24px;
       margin-left: 0;
     }
