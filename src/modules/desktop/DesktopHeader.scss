@@ -13,8 +13,8 @@
 
   .desktop-header-fixed {
     position: fixed;
-    top: 100px;
-    left: 100px;
+    top: 60px;
+    left: 60px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -24,7 +24,7 @@
       font-size: 24px;
       font-weight: bold;
       margin-top: 24px;
-      margin-bottom: 80px;
+      margin-bottom: 60px;
 
       @include themify($themes) {
         color: themed("primary-text-color");
