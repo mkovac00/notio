@@ -17,15 +17,9 @@
   }
 
   .new-note-btn-close {
-    display: none;
-  }
-
-  .show-btn {
-    display: inline-block;
-  }
-
-  .hide-btn {
-    display: none;
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   .colored-circle {

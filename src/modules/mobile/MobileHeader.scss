@@ -21,11 +21,18 @@
     }
   }
 
-  .mobile-nav-btn {
-    margin-left: 24px;
+  .mobile-header-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 
-    &:hover {
-      cursor: pointer;
+    .mobile-nav-btn {
+      margin-left: 24px;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 }

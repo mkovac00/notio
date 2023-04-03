@@ -10,33 +10,60 @@ import "./NewNote.scss";
 
 const NewNote = () => {
   const { theme } = useContext(ThemeContext);
-  const [isShown, setIsShown] = useState(false);
+  const [isNewNoteMenuOpened, setIsNewNoteMenuOpened] = useState(false);
   const isSmallScreen = useIsSmallScreen();
 
   const handleShown = () => {
-    setIsShown(!isShown);
+    setIsNewNoteMenuOpened(!isNewNoteMenuOpened);
   };
 
   return (
     <div className="new-note-picker">
-      <AiFillPlusCircle
-        className="new-note-btn"
-        color={
-          theme === "light" ? buttonColors.lightMode : buttonColors.darkMode
-        }
-        onClick={handleShown}
-        size={32}
-      />
-      <AiFillCloseCircle
-        className="new-note-btn-close"
-        color={
-          theme === "light" ? buttonColors.lightMode : buttonColors.darkMode
-        }
-        size={32}
-      />
+      {!isNewNoteMenuOpened && (
+        <motion.div
+          key="button-1-571029486"
+          initial={{ scale: 0 }}
+          animate={{ rotate: 360, scale: 1 }}
+          transition={{ type: "spring", stiffness: 260, damping: 20 }}
+        >
+          <AiFillPlusCircle
+            id="new-note-btn"
+            className="new-note-btn"
+            color={
+              theme === "light" ? buttonColors.lightMode : buttonColors.darkMode
+            }
+            onClick={handleShown}
+            size={32}
+          />
+        </motion.div>
+      )}
+
+      {isNewNoteMenuOpened && (
+        <motion.div
+          key="button-2-009174832"
+          initial={{ scale: 0 }}
+          animate={{ rotate: 360, scale: 1 }}
+          transition={{
+            type: "spring",
+            stiffness: 260,
+            damping: 20,
+          }}
+        >
+          <AiFillCloseCircle
+            id="new-note-btn-close"
+            className="new-note-btn-close"
+            color={
+              theme === "light" ? buttonColors.lightMode : buttonColors.darkMode
+            }
+            onClick={handleShown}
+            size={32}
+          />
+        </motion.div>
+      )}
+
       <Link to="/note/create/c4e95c/607341">
         <AnimatePresence>
-          {isShown && (
+          {isNewNoteMenuOpened && (
             <motion.div
               key="circle-1-943843109"
               initial={
@@ -61,7 +88,7 @@ const NewNote = () => {
       </Link>
       <Link to="/note/create/ff9c96/603c3a">
         <AnimatePresence>
-          {isShown && (
+          {isNewNoteMenuOpened && (
             <motion.div
               key="circle-2-834463859"
               initial={
@@ -86,7 +113,7 @@ const NewNote = () => {
       </Link>
       <Link to="/note/create/6cedbe/3f705e">
         <AnimatePresence>
-          {isShown && (
+          {isNewNoteMenuOpened && (
             <motion.div
               key="circle-3-734123190"
               initial={
@@ -111,7 +138,7 @@ const NewNote = () => {
       </Link>
       <Link to="/note/create/deb4ff/614a73">
         <AnimatePresence>
-          {isShown && (
+          {isNewNoteMenuOpened && (
             <motion.div
               key="circle-4-745210008"
               initial={
@@ -136,7 +163,7 @@ const NewNote = () => {
       </Link>
       <Link to="/note/create/9ceee9/397078">
         <AnimatePresence>
-          {isShown && (
+          {isNewNoteMenuOpened && (
             <motion.div
               key="circle-5-745317490"
               initial={
