@@ -131,12 +131,16 @@ const EditNote = () => {
           />
         </Link>
 
-        <textarea id="edit-note_title-id" className="edit-note_title">
-          {currentNote.title}
-        </textarea>
-        <textarea id="edit-note_content-id" className="edit-note_content">
-          {currentNote.content}
-        </textarea>
+        <textarea
+          id="edit-note_title-id"
+          className="edit-note_title"
+          defaultValue={currentNote.title}
+        ></textarea>
+        <textarea
+          id="edit-note_content-id"
+          className="edit-note_content"
+          defaultValue={currentNote.content}
+        ></textarea>
         <p className="edit-note_updated">{currentNote.updated}</p>
       </div>
     </div>
