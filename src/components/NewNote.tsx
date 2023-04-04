@@ -82,6 +82,7 @@ const NewNote = () => {
               }
               id="cc-1"
               className="colored-circle colored-circle-1"
+              onClick={handleShown}
             ></motion.div>
           )}
         </AnimatePresence>
@@ -107,6 +108,7 @@ const NewNote = () => {
               }
               id="cc-2"
               className="colored-circle colored-circle-2"
+              onClick={handleShown}
             ></motion.div>
           )}
         </AnimatePresence>
@@ -132,6 +134,7 @@ const NewNote = () => {
               }
               id="cc-3"
               className="colored-circle colored-circle-3"
+              onClick={handleShown}
             ></motion.div>
           )}
         </AnimatePresence>
@@ -157,6 +160,7 @@ const NewNote = () => {
               }
               id="cc-4"
               className="colored-circle colored-circle-4"
+              onClick={handleShown}
             ></motion.div>
           )}
         </AnimatePresence>
@@ -182,6 +186,7 @@ const NewNote = () => {
               }
               id="cc-5"
               className="colored-circle colored-circle-5"
+              onClick={handleShown}
             ></motion.div>
           )}
         </AnimatePresence>

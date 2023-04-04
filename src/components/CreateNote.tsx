@@ -11,6 +11,7 @@ import "./CreateNote.scss";
 
 const CreateNote = () => {
   const [isCreatedPopup, setIsCreatedPopup] = useState(false);
+  const [isEmptyPopup, setIsEmptyPopup] = useState(false);
   const { color, colorDark } = useParams();
   const { theme } = useContext(ThemeContext);
 
@@ -40,15 +41,18 @@ const CreateNote = () => {
         };
 
         allNotes.push(createdNote);
+        showNoteCreatedPopup();
+
+        noteTitle.value = "";
+        noteContent.value = "";
+      } else {
+        showNoteEmptyPopup();
       }
+    } else {
+      showNoteEmptyPopup();
     }
 
     localStorage.setItem("notes", JSON.stringify(allNotes));
-
-    noteTitle.value = "";
-    noteContent.value = "";
-
-    showNoteCreatedPopup();
   };
 
   const showNoteCreatedPopup = () => {
@@ -58,11 +62,19 @@ const CreateNote = () => {
     }, 1500);
   };
 
+  const showNoteEmptyPopup = () => {
+    setIsEmptyPopup(true);
+    setTimeout(() => {
+      setIsEmptyPopup(false);
+    }, 1500);
+  };
+
   return (
     <div className="create-note_container">
       <h1 className="create-note_container-title">Creating a note</h1>
       <AnimatePresence>
         {isCreatedPopup && <Popup content="Note created!" />}
+        {isEmptyPopup && <Popup content="Enter all fields!" />}
       </AnimatePresence>
       <div
         className="create-note_section"
