@@ -1,0 +1,21 @@
+@import "../assets/variables";
+
+.popup-container {
+  position: absolute;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: calc(50vw - (150px / 2));
+  width: 150px;
+  height: 30px;
+  background-color: #949494;
+  border-radius: 8px;
+  transform: translateX(-50%);
+
+  .popup-text {
+    font-size: 20px;
+    color: #ffffff;
+  }
+}

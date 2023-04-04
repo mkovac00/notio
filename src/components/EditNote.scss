@@ -29,9 +29,19 @@
 
     @include padding(24px, 16px, 16px, 24px);
 
-    .edit-note_btn {
+    .edit-note_save-btn {
       position: absolute;
       top: 26px;
+      left: -32px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .edit-note_delete-btn {
+      position: absolute;
+      top: 76px;
       left: -32px;
 
       &:hover {
@@ -114,10 +124,16 @@
         @include text-overflow-single-line(90%);
       }
 
-      .edit-note_btn {
+      .edit-note_save-btn {
         position: absolute;
         top: -32px;
         left: 16px;
+      }
+
+      .edit-note_delete-btn {
+        position: absolute;
+        top: -32px;
+        left: 66px;
       }
     }
   }

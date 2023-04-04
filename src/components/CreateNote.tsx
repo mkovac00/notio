@@ -1,13 +1,16 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { useParams } from "react-router-dom";
 import { AiOutlineCheckCircle } from "react-icons/ai";
 import { getCurrentDate } from "../assets/functions";
 import { ThemeContext } from "../context/theme-context";
 import { buttonColors } from "../assets/variables";
+import { AnimatePresence } from "framer-motion";
+import Popup from "./Popup";
 
 import "./CreateNote.scss";
 
 const CreateNote = () => {
+  const [isCreatedPopup, setIsCreatedPopup] = useState(false);
   const { color, colorDark } = useParams();
   const { theme } = useContext(ThemeContext);
 
@@ -44,11 +47,23 @@ const CreateNote = () => {
 
     noteTitle.value = "";
     noteContent.value = "";
+
+    showNoteCreatedPopup();
+  };
+
+  const showNoteCreatedPopup = () => {
+    setIsCreatedPopup(true);
+    setTimeout(() => {
+      setIsCreatedPopup(false);
+    }, 1500);
   };
 
   return (
     <div className="create-note_container">
       <h1 className="create-note_container-title">Creating a note</h1>
+      <AnimatePresence>
+        {isCreatedPopup && <Popup content="Note created!" />}
+      </AnimatePresence>
       <div
         className="create-note_section"
         style={

@@ -1,13 +1,16 @@
-import { useContext } from "react";
-import { useParams } from "react-router-dom";
-import { AiOutlineCheckCircle } from "react-icons/ai";
+import { useContext, useState } from "react";
+import { useParams, Link } from "react-router-dom";
+import { AiOutlineCheckCircle, AiOutlineDelete } from "react-icons/ai";
 import { getCurrentDate } from "../assets/functions";
 import { ThemeContext } from "../context/theme-context";
 import { buttonColors } from "../assets/variables";
+import { AnimatePresence } from "framer-motion";
+import Popup from "./Popup";
 
 import "./EditNote.scss";
 
 const EditNote = () => {
+  const [isSavedPopup, setIsSavedPopup] = useState(false);
   const { nid } = useParams();
   const { theme } = useContext(ThemeContext);
 
@@ -22,12 +25,16 @@ const EditNote = () => {
     },
   };
 
-  let allNotes = JSON.parse(localStorage.getItem("notes") || "[]");
-  allNotes.forEach((note: any) => {
-    if (note.id.toString() === nid) {
-      currentNote = note;
-    }
-  });
+  const loadCurrentNoteFromLocalStorage = () => {
+    let allNotes = JSON.parse(localStorage.getItem("notes") || "[]");
+    allNotes.forEach((note: any) => {
+      if (note.id.toString() === nid) {
+        currentNote = note;
+      }
+    });
+  };
+
+  loadCurrentNoteFromLocalStorage();
 
   const saveNoteToLocalStorage = () => {
     let allNotes = JSON.parse(localStorage.getItem("notes") || "[]");
@@ -59,11 +66,38 @@ const EditNote = () => {
     }
 
     localStorage.setItem("notes", JSON.stringify(allNotes));
+    showNoteSavedPopup();
+  };
+
+  const deleteNoteFromLocalStorage = () => {
+    let allNotes = JSON.parse(localStorage.getItem("notes") || "[]");
+    let currentNoteIndex = 0;
+    allNotes.forEach((note: any) => {
+      if (note.id.toString() === nid) {
+        currentNoteIndex = allNotes.indexOf(note);
+      }
+    });
+
+    if (currentNoteIndex !== -1) {
+      allNotes.splice(currentNoteIndex, 1);
+    }
+
+    localStorage.setItem("notes", JSON.stringify(allNotes));
+  };
+
+  const showNoteSavedPopup = () => {
+    setIsSavedPopup(true);
+    setTimeout(() => {
+      setIsSavedPopup(false);
+    }, 1500);
   };
 
   return (
     <div className="edit-note_container">
       <h1 className="edit-note_container-title">Viewing note</h1>
+      <AnimatePresence>
+        {isSavedPopup && <Popup content="Note saved!" />}
+      </AnimatePresence>
       <div
         className="edit-note_section"
         style={
@@ -80,12 +114,23 @@ const EditNote = () => {
       >
         <AiOutlineCheckCircle
           size={25}
-          className="edit-note_btn"
+          className="edit-note_save-btn"
           onClick={saveNoteToLocalStorage}
           color={
             theme === "light" ? buttonColors.lightMode : buttonColors.darkMode
           }
         />
+        <Link to="/">
+          <AiOutlineDelete
+            size={25}
+            className="edit-note_delete-btn"
+            onClick={deleteNoteFromLocalStorage}
+            color={
+              theme === "light" ? buttonColors.lightMode : buttonColors.darkMode
+            }
+          />
+        </Link>
+
         <textarea id="edit-note_title-id" className="edit-note_title">
           {currentNote.title}
         </textarea>
