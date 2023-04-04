@@ -32,7 +32,7 @@
 
 .notes-list-container {
   .notes-list-title {
-    font-size: 48px;
+    font-size: 32px;
     font-weight: bold;
     @include themify($themes) {
       color: themed("primary-text-color");
@@ -50,6 +50,9 @@
     .notes-list_no-content-message {
       font-size: 24px;
       @include padding(0, 10vw, 0, 10vw);
+      @include themify($themes) {
+        color: themed("primary-text-color");
+      }
     }
   }
 
@@ -75,6 +78,7 @@
 @media only screen and (min-width: $medium-screen) {
   .notes-list-container {
     .notes-list-title {
+      font-size: 48px;
       @include padding(40px, 0, 24px, 24px);
     }
 
