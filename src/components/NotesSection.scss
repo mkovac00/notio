@@ -59,10 +59,11 @@
   .notes-list-content {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-flow: wrap;
     list-style-type: none;
+    padding-left: 4vw;
 
     li {
       .notes-list-item {
@@ -75,6 +76,15 @@
   }
 }
 
+@media only screen and (min-width: 600px) {
+  .notes-list-container {
+    .notes-list-content {
+      padding-left: 8vw;
+      padding-right: 8vw;
+    }
+  }
+}
+
 @media only screen and (min-width: $medium-screen) {
   .notes-list-container {
     .notes-list-title {
@@ -83,7 +93,7 @@
     }
 
     .notes-list-content {
-      justify-content: flex-start;
+      padding-left: 0;
 
       .notes-list_no-content {
         display: flex;
