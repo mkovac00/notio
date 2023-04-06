@@ -74,7 +74,7 @@ const NotesSection = () => {
         <ul className="notes-list-content">
           {notesState.length !== 0 &&
             notesState.map((note) => (
-              <li>
+              <li key={note.id}>
                 <Link to={`/note/${note.id}`} className="notes-list-item">
                   <Note
                     id={note.id}
